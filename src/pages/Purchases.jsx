@@ -2,8 +2,10 @@ import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { getPurchasesThunk } from '../store/slices/purchases.slice';
 import { useSelector } from 'react-redux';
-import { ListGroup, Row } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
+import { ListGroup, Row, Col } from 'react-bootstrap';
+
+
 
 const Purchases = () => {
 
@@ -18,19 +20,24 @@ const Purchases = () => {
     return (
         <div>
             <h1>Purchases</h1>
+            
+
+            
             <ListGroup>
                 {
-                    purchases[0]?.cart?.products.map(purchase => (
-                        <ListGroup.Item onClick={() => navigate(`/product/${purchases.cart.id}`)}>
-                           <Row> 
-                                 
-                                    {purchase.title}
-                            
-                                <br />
-                                
-                                <b>Price: </b> llaves
-                                
+                    purchases.map(purchase => (
+                        <ListGroup.Item>
+                            Compra nº: {purchase.id}
+                            Creeada el: {purchase.createdAt}
+                            <ListGroup.Item>
+                            {purchase?.cart.products.map(item => (
+                            <Row> 
+                                <Col> <b onClick={() => navigate(`/product/${item.id}`)}>{item.title}</b> </Col>
+                                <Col> <h4>{item.productsInCart?.quantity}</h4> </Col>  
+                                <Col> <h3>Price: {item.price}</h3>   </Col> 
                             </Row>
+                            ))}
+                            </ListGroup.Item>
                         </ListGroup.Item>
                     ))
                 }
@@ -40,3 +47,6 @@ const Purchases = () => {
 };
 
 export default Purchases;
+
+
+

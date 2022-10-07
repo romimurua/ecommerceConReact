@@ -12,7 +12,7 @@ const ProductDetail = () => {
     const productDetail = productsList?.find(
         newproducts => newproducts.id === Number(id))
     const relatedProducts = productsList.filter(
-        newproducts => newproducts.category.id === productDetail.category.id)
+        newproducts => newproducts.category.id === productDetail?.category.id)
 
 
     return (

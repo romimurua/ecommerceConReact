@@ -41,7 +41,9 @@ const Home = () => {
   }
   
   return (
+        
         <Row>
+          <h4>Category</h4>
           <Col lg={3}>
           <ListGroup>
               {
@@ -75,11 +77,7 @@ const Home = () => {
                       <Card.Img variant="top" src={newproducts.productImgs?.[1]}/>
                       <Card.Body>
                         <Card.Title>{newproducts.title}</Card.Title>
-                        <Card.Text>
-                          This is a longer card with supporting text below as a natural
-                          lead-in to additional content. This content is a little bit
-                          longer.
-                        </Card.Text>
+                        <Card.Text>Price: {newproducts.price}</Card.Text>
                       </Card.Body>
                     </Card>
                   </Col>
