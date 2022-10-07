@@ -34,7 +34,7 @@ const Purchases = () => {
                             <Row> 
                                 <Col> <b onClick={() => navigate(`/product/${item.id}`)}>{item.title}</b> </Col>
                                 <Col> <h4>{item.productsInCart?.quantity}</h4> </Col>  
-                                <Col> <h3>Price: {item.price}</h3>   </Col> 
+                                <Col> <h3>Price: {item.price} USD</h3>   </Col> 
                             </Row>
                             ))}
                             </ListGroup.Item>

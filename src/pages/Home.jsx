@@ -62,7 +62,7 @@ const Home = () => {
           <Col>
             <InputGroup className="mb-3">
               <FormControl
-                placeholder="Search products"
+                placeholder="Whats are you lokking for?"
                 onChange={e => setSearchValue(e.target.value)}
                 value={searchValue}
               />

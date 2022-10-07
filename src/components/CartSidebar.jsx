@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react';
-import { ListGroup, ListGroupItem, Offcanvas } from 'react-bootstrap';
+import { Button, ListGroup, ListGroupItem, Offcanvas } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 import { getCartThunk } from '../store/slices/cart.slice';
 import { Link } from 'react-router-dom';
+import { purchasesCartThunk } from '../store/slices/cart.slice';
 
 
 const CartSidebar = ({show, handleClose}) => {
@@ -25,11 +26,13 @@ const CartSidebar = ({show, handleClose}) => {
                     <ListGroupItem key={item.id}>
                         <h6>{item.brand}</h6>
                         <Link to={`/product/${item.id}`}>{item.title}</Link>
-                        <p>Price: {item.price}</p>
+                        <p>{item.productsInCart.quantity}</p>
+                        <p>Price: {item.price} USD</p>
                     </ListGroupItem>
                 ))
                 }
             </ListGroup>
+            <Button onClick={() => dispatch (purchasesCartThunk())}>Check Out</Button>
         </Offcanvas.Body>
       </Offcanvas>
     );

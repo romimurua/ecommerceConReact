@@ -21,6 +21,17 @@ export const getPurchasesThunk = () => (dispatch) => {
 
 }
 
+/*export const addCartThunk= (product) => (dispatch) => {
+    dispatch(setIsLoading(true));
+    axios.post("https://ecommerce-api-react.herokuapp.com/api/v1/cart/",
+    product,
+    getConfig()
+    )
+        .then(() => dispatch(getPurchasesThunk()))
+        .finally(() => dispatch(setIsLoading(false)))
+        .catch(error => console.log(error.response))
+}*/
+
 export const { setPurchases } = purchasesSlice.actions;
 
 export default purchasesSlice.reducer;
