@@ -24,7 +24,7 @@ function App() {
 
   return (
     
-    
+    <div> 
     <HashRouter>
       <MyNavbar />
       {isLoading && <LoadingScreen />}
@@ -41,8 +41,12 @@ function App() {
         </Routes>
       </Container>
     </HashRouter>
-   
+  
+  <footer className="footer"> Proyecto Final del Módulo de REACT - Academlo </footer>
+  </div>
   )
 }
+
+
 
 export default App

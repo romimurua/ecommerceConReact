@@ -32,7 +32,7 @@ const CartSidebar = ({show, handleClose}) => {
                 ))
                 }
             </ListGroup>
-            <Button onClick={() => dispatch (purchasesCartThunk())}>Check Out</Button>
+            <Button onClick={() => dispatch (purchasesCartThunk())}>Checkout</Button>
         </Offcanvas.Body>
       </Offcanvas>
     );
