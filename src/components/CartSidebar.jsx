@@ -17,8 +17,8 @@ const CartSidebar = ({show, handleClose}) => {
 
     return (
         <Offcanvas show={show} onHide={handleClose} placement="end">
-        <Offcanvas.Header closeButton>
-          <Offcanvas.Title>My purchases</Offcanvas.Title>
+        <Offcanvas.Header className='cart' closeButton>
+          <h5 className='cart-title'>My purchases</h5>
         </Offcanvas.Header>
         <Offcanvas.Body>
             <ListGroup>
@@ -32,7 +32,7 @@ const CartSidebar = ({show, handleClose}) => {
                 ))
                 }
             </ListGroup>
-            <Button onClick={() => dispatch (purchasesCartThunk())}>Checkout</Button>
+            <Button className='button-my-purchases' onClick={() => dispatch (purchasesCartThunk())}>Checkout</Button>
         </Offcanvas.Body>
       </Offcanvas>
     );

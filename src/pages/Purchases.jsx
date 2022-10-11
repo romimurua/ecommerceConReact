@@ -26,19 +26,19 @@ const Purchases = () => {
             <ListGroup>
                 {
                     purchases.map(purchase => (
-                        <ListGroup.Item>
-                            Compra nº: {purchase.id}
-                            Creeada el: {purchase.createdAt}
-                            <ListGroup.Item>
+                        <div className='card-purchases' >
+                            <h6>Compra nº: {purchase.id} </h6>
+                            <h6>Creada el: {purchase.createdAt}</h6>
+                            <ListGroup.Item className='card-purchases-dos'>
                             {purchase?.cart.products.map(item => (
                             <Row> 
                                 <Col> <b onClick={() => navigate(`/product/${item.id}`)}>{item.title}</b> </Col>
-                                <Col> <h4>{item.productsInCart?.quantity}</h4> </Col>  
-                                <Col> <h3>Price: {item.price} USD</h3>   </Col> 
+                                <Col> <p> {item.productsInCart?.quantity}</p> </Col>  
+                                <Col> <h5>${item.price}</h5>   </Col> 
                             </Row>
                             ))}
                             </ListGroup.Item>
-                        </ListGroup.Item>
+                        </div>
                     ))
                 }
             </ListGroup>

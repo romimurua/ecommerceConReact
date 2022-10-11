@@ -32,8 +32,8 @@ const Login = () => {
             });
     }
     return (
-        <div>
-           <h1>Login</h1>
+        <div className='login'>
+           <p>Welcome! Enter your email and password to continue</p>
            <Form onSubmit={handleSubmit(submit)}>
             <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Email address</Form.Label>
@@ -45,7 +45,7 @@ const Login = () => {
                 <Form.Control {...register("password")} type="password" placeholder="Password" />
             </Form.Group>
 
-            <Button variant="primary" type="submit">
+            <Button className='submit' variant="primary" type="submit">
                 Submit
             </Button>
             </Form>

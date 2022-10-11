@@ -24,12 +24,12 @@ function App() {
 
   return (
     
-    <div> 
+    <div className='body'> 
     <HashRouter>
       <MyNavbar />
       {isLoading && <LoadingScreen />}
       <Container className="mt-5">
-        <Routes>
+        <Routes className='container-login'>
           <Route path="/" element={<Home />} />
           <Route path="/product/:id" element={<ProductDetail />} />
           <Route path="/login" element={<Login />} />
@@ -42,7 +42,7 @@ function App() {
       </Container>
     </HashRouter>
   
-  <footer className="footer"> Proyecto Final del Módulo de REACT - Academlo </footer>
+  <footer className="footer"> Proyecto Final del Módulo de React.js - Academlo </footer>
   </div>
   )
 }

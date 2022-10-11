@@ -5,7 +5,8 @@ import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { Row } from 'react-bootstrap';
 import { Col } from 'react-bootstrap';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import  { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 const Home = () => {
     
   const  navigate = useNavigate();
@@ -66,15 +67,15 @@ const Home = () => {
                 onChange={e => setSearchValue(e.target.value)}
                 value={searchValue}
               />
-              <Button variant="outline-secondary" onClick={searchProducts}>
-                Button
+              <Button className='search-home' variant="outline-secondary" onClick={searchProducts}>
+              <FontAwesomeIcon className='icon-search-home' icon={faMagnifyingGlass} />
               </Button>
             </InputGroup>
             <Row xs={1} md={2} xl={3} className="g-4">
                 {productsFiltered.map(newproducts => (
                   <Col key={newproducts.id}>
-                    <Card onClick={() => navigate(`/product/${newproducts.id}`)} style={{height: "100%"}}>
-                      <Card.Img variant="top" src={newproducts.productImgs?.[1]}/>
+                    <Card className='card-product' onClick={() => navigate(`/product/${newproducts.id}`)} style={{height: "100%"}}>
+                      <img className='img-product-home' src={newproducts.productImgs?.[1]}/>
                       <Card.Body>
                         <Card.Title>{newproducts.title}</Card.Title>
                         <Card.Text>Price: {newproducts.price}</Card.Text>
