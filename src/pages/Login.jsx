@@ -34,6 +34,12 @@ const Login = () => {
     return (
         <div className='login'>
            <p>Welcome! Enter your email and password to continue</p>
+           <div className='testData-container'>
+            <h5>Test data</h5>
+                <div>
+                    <p><i class="fa-regular fa-envelope"></i> max@gmail.com</p>
+                    <p><i class="fa-solid fa-lock"></i> pass1234</p>
+                </div>
            <Form onSubmit={handleSubmit(submit)}>
             <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Email address</Form.Label>
