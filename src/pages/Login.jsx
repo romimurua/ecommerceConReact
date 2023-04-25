@@ -36,8 +36,8 @@ const Login = () => {
            <p>Welcome! Enter your email and password to continue</p>
                 <div className='testData'>
                     <h5>Test data</h5>
-                    <p><i class="fa-regular fa-envelope"></i> max@gmail.com</p>
-                    <p><i class="fa-solid fa-lock"></i> pass1234</p>
+                    <p>max@gmail.com</p>
+                    <p>pass1234</p>
                 </div>
            <Form onSubmit={handleSubmit(submit)}>
             <Form.Group className="mb-3" controlId="formBasicEmail">
