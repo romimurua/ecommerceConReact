@@ -17,11 +17,7 @@ const Home = () => {
   const [ categories, setCategories ] = useState([]);
   const [ productsFiltered, setProductsFiltered ] = useState([]);
   const [ searchValue, setSearchValue ] = useState("");
-
-  // useEffect (() => {
-  //  axios.get("https://e-commerce-api.academlo.tech/api/v1/products/categories")
-  //    .then(res => setCategories(res.data.data.categories))
-  // }, []) 
+    
     
   useEffect(() => {
     axios
