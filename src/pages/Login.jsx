@@ -34,9 +34,8 @@ const Login = () => {
     return (
         <div className='login'>
            <p>Welcome! Enter your email and password to continue</p>
-           <div className='testData-container'>
-            <h5>Test data</h5>
-                <div>
+                <div className='testData'>
+                    <h5>Test data</h5>
                     <p><i class="fa-regular fa-envelope"></i> max@gmail.com</p>
                     <p><i class="fa-solid fa-lock"></i> pass1234</p>
                 </div>
