@@ -6,9 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import { Row } from 'react-bootstrap';
 import { Col } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import  { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons
-
-
+import  { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 const Home = () => {
     
   const  navigate = useNavigate();
@@ -16,12 +14,11 @@ const Home = () => {
   const [ categories, setCategories ] = useState([]);
   const [ productsFiltered, setProductsFiltered ] = useState([]);
   const [ searchValue, setSearchValue ] = useState("");
-    
-    
+
   useEffect (() => {
     axios.get("https://e-commerce-api.academlo.tech/api/v1/products/categories")
-         .then(res => setCategories(res.data.data.categories))
-  }, []) 
+      .then(res => setCategories(res.data.data.categories))
+  }, [])
 
 
   useEffect(() => {
@@ -43,7 +40,6 @@ const Home = () => {
     )
     setProductsFiltered(filtered)
   }
-
   
   return (
         
