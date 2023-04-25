@@ -8,7 +8,6 @@ import { Col } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import  { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons;
 
-const baseUrl = "https://e-commerce-api.academlo.tech/api/v1";
 
 const Home = () => {
     
@@ -19,11 +18,10 @@ const Home = () => {
   const [ searchValue, setSearchValue ] = useState("");
     
     
-  useEffect(() => {
-    axios
-      .get(baseUrl + "/products/categories")
-      .then((res) => setCategories(res.data.data.categories));
-  }, []);
+  useEffect (() => {
+    axios.get("https://e-commerce-api.academlo.tech/api/v1/products/categories")
+         .then(res => setCategories(res.data.data.categories))
+  }, []) 
 
 
   useEffect(() => {
@@ -45,6 +43,7 @@ const Home = () => {
     )
     setProductsFiltered(filtered)
   }
+
   
   return (
         
