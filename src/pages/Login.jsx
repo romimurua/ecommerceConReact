@@ -35,7 +35,7 @@ const Login = () => {
         <div className='login'>
            <p>Welcome! Enter your email and password to continue</p>
                 <div className='testData'>
-                    <h6>Test data</h6>
+                    <h4>Test data</h4>
                     <p>* max@gmail.com</p>
                     <p>* pass1234</p>
                 </div>
