@@ -16,7 +16,7 @@ const Home = () => {
   const [ searchValue, setSearchValue ] = useState("");
 
   useEffect (() => {
-    axios.get("https://e-commerce-api.academlo.tech/api/v1/")
+    axios.get("https://e-commerce-api.academlo.tech/api/v1/products/")
       .then(res => setCategories(res.data.data.categories))
   }, [])
 
